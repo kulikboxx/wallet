@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/0c51b4e0d7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="app">
+        <div class="app__wrapper">
+            <h1 class="app__title"><i class="fas fa-wallet"></i>Wallet</h1>
+            <p class="app__subtitle">Your personal finance manager.</p>
+            <div class="app__container">
+                <h2 class="app__heading">Transaction list</h2>
+                <div class="app__boxes">
+                    <div class="app__box">
+                        <h3 class="app__heading2">Income</h3>
+                        <ul id="income" class="app__list"></ul>
+                    </div>
+                    <div class="app__box">
+                        <h3 class="app__heading2">Expenses</h3>
+                        <ul id="expenses" class="app__list"></ul>
+                    </div>
+                    <div class="app__box">
+                        <h3 class="app__heading2">Available funds</h3>
+                        <p class="app__funds"></p>
+                        <div class="app__btns">
+                            <button class="app__add"><i class="fas fa-plus"></i>Add transaction</button>
+                            <button class="app__remove"><i class="fas fa-trash-alt"></i>Remove all</button>
+                        </div>
+                        <p class="app__heading3">Change theme</p>
+                        <div class="app__btns">
+                            <button class="app__light"></button>
+                            <button class="app__dark"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal">
+            <div class="modal__wrapper">
+                <h2 class="modal__title">Add new transaction</h2>
+                <label for="name" class="modal__name">Transaction name:</label>
+                <input type="text" id="name" class="modal__input">
+                <span class="modal__alert"></span>
+                <label for="amount" class="modal__amount">Amount:</label>
+                <input type="number" id="amount" class="modal__input">
+                <span class="modal__alert"></span>
+                <label for="category" class="modal__category">Select a category:</label>
+                <select id="category" class="modal__input">
+                    <option value="0" selected disabled></option>
+                    <option value="income">[+] Income</option>
+                    <option value="shopping">[-] Shopping</option>
+                    <option value="food">[-] Food</option>
+                    <option value="cinema">[-] Cinema</option>
+                </select>
+                <span class="modal__alert"></span>
+                <div class="modal__btns">
+                    <button class="modal__save"><i class="fas fa-save"></i>Save</button>
+                    <button class="modal__cancel"><i class="fas fa-window-close"></i>Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
